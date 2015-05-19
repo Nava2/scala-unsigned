@@ -2,11 +2,10 @@ package passera.unsigned
 
 import scala.math.ScalaNumericAnyConversions
 
-@serializable
 trait Unsigned[U <: Unsigned[U, Promoted, SignedPromoted],
                Promoted <: Unsigned[_, Promoted, SignedPromoted],
                SignedPromoted]
-               extends Any with ScalaNumericAnyConversions {
+               extends Any with ScalaNumericAnyConversions with Serializable {
 
   def toByte: Byte
   def toChar: Char
